@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+    <div class="login">
+       <h1>Predict Salary Analysis</h1>
+   
+        <!-- Main Input For Receiving Query to our ML -->
+       <form action="{{ url_for('predict')}}"method="post">
+           <input type="text" name="Gender" placeholder="Gender"  />
+           <input type="text" name="Graduated" placeholder="Graduated"  />
+           <input type="text" name="Profession_Artist" placeholder="Profession_Artist" />
+           <input type="text" name="Spending_low" placeholder="Family_Size"  />
+           <input type="text" name="Spending_Average" placeholder="Spending_Score"  />
+           <input type="text" name="Spending_High" placeholder="Experience"  />
+           <input type="text" name="Age_Bin_17-30" placeholder="Test Score"  />
+           <input type="text" name="Age_Bin_31-45" placeholder="Interview Score"  />
+           <input type="text" name="Age_Bin_46-60" placeholder="Experience"  />
+           <input type="text" name="Age_Bin_60+" placeholder="Test Score"  />
+           <input type="text" name="Profession_Doctor" placeholder="Interview Score"  />
+           <input type="text" name="Profession_Engineer	" placeholder="Experience"  />
+           <input type="text" name="FamilySize_Small Family" placeholder="Test Score"  />
+           <input type="text" name="FamilySize_Big Family" placeholder="Interview Score" />
+           <input type="text" name="FamilySize_Joint Family	" placeholder="Experience"  />
+           <input type="text" name="Var_1_Cat_1" placeholder="Test Score"  />
+           <input type="text" name="Var_1_Cat_2" placeholder="Interview Score"  />
+           <input type="text" name="Var_1_Cat_3" placeholder="Experience"  />
+           <input type="text" name="Var_1_Cat_4	" placeholder="Test Score"  />
+           <input type="text" name="Var_1_Cat_5" placeholder="Interview Score"  />
+           <input type="text" name="Var_1_Cat_6" placeholder="Experience"  />
+           <input type="text" name="Var_1_Cat_7" placeholder="Test Score"  />
+           <input type="text" name="Ever_Married" placeholder="Interview Score"  />
+           <input type="text" name="Profession_Homemaker" placeholder="Experience"  />
+           <input type="text" name="Profession_Lawyer" placeholder="Test Score"  />
+           <input type="text" name="Profession_Marketing" placeholder="Interview Score"  />
+           <input type="text" name="Entertainment" placeholder="Experience" />
+           <input type="text" name="Profession_Executive" placeholder="Test Score"  />
+           <input type="text" name="Profession_Healthcare" placeholder="Interview Score"  />
+           <input type="text" name="WorkExp_Law Experience" placeholder="Experience"  />
+           <input type="text" name="WorkExp_Medium Experience" placeholder="Test Score"  />
+           <input type="text" name="WorkExp_High Experience" placeholder="Test Score"  />
+           <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+       </form>
+   
+      <br>
+      <br>
+      {{ prediction_text }}
+   
+    </div>
+   
+   
+   </body>
+   </html>
+   
+            

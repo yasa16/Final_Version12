@@ -1,0 +1,5 @@
+{
+    "mongoURL": "mongodb+srv://fdm123:fdm123@cluster0.qcveh.mongodb.net/fdmdatabase?retryWrites=true&w=majority",
+  
+    "jwtSecret": "mysecrettoken"
+}
